@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job that builds and publishes to Pages
+  # Single deploy job since we are deploying pure static files
   deploy:
     environment:
       name: github-pages
@@ -32,31 +32,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site with Vite
-        run: npm run build
-
-      - name: Copy root static assets to dist
-        run: |
-          cp -f sitemap.xml robots.txt favicon.svg .nojekyll dist/ 2>/dev/null || true
-          mkdir -p dist/assets
-          cp -f assets/logo.png dist/assets/ 2>/dev/null || true
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          # Upload static files directly (no build step or lockfile required)
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
