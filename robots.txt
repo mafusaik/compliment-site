@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://compliment.app/sitemap.xml

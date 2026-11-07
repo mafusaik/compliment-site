@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support & FAQ — Compliment Mobile App</title>
+    <meta name="description" content="Help, troubleshooting, and support for the Compliment mobile app. Learn how to fix notifications, adjust delivery times, and reach the developer." />
+    <meta name="author" content="GlazerDev" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://compliment.app/support.html" />
+    <meta property="og:title" content="Support & FAQ — Compliment App" />
+    <meta property="og:description" content="Troubleshoot notifications, adjust schedule, or contact developer GlazerDev." />
+    <meta property="og:image" content="assets/logo.png" />
+
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Top Bar Navigation (Strict 3-zone contract) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Zone 1: Single text element wordmark with real logo -->
+        <a href="index.html" class="brand-zone" aria-label="Compliment Home">
+          <img src="assets/logo.png" alt="Compliment Logo" class="brand-logo-img" />
+          <span class="brand-title">Compliment</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-zone" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="support.html" class="nav-link active">Support</a>
+          <a href="privacy.html" class="nav-link">Privacy</a>
+          <a href="terms.html" class="nav-link">Terms</a>
+        </nav>
+
+        <!-- Zone 3: Actions (Language toggle + Theme switch + Store CTA) -->
+        <div class="actions-zone">
+          <!-- Language Toggle to Russian separate page -->
+          <a href="ru/support.html" class="lang-switch" title="Переключить на русский">
+            RU
+          </a>
+
+          <!-- Light/Dark Mode Switcher -->
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle color theme">
+            <svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sunIcon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- Store Download CTA -->
+          <a href="index.html#download" class="nav-cta-btn">
+            Get App
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="support.html" class="nav-link active">Support</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+        <div class="mobile-actions">
+          <a href="ru/support.html" class="lang-switch">Русский (RU)</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">Support & FAQ</h1>
+          <p class="page-subtitle">
+            Need help with your daily compliments? Find quick answers below or reach out directly to the developer.
+          </p>
+        </div>
+      </section>
+
+      <!-- Support Grid: Direct Contact & FAQ -->
+      <div class="container">
+        <div class="support-grid">
+          <!-- Left Column: Contact Card -->
+          <aside>
+            <div class="contact-card">
+              <h2 class="contact-title">Contact Developer</h2>
+              <p class="contact-desc">
+                Have a question, feedback, or a compliment you’d love to see added to the app? We read every email.
+              </p>
+
+              <div class="email-box">
+                <span class="email-label">Support Email</span>
+                <a href="mailto:glazer.dev@gmail.com" class="email-link">glazer.dev@gmail.com</a>
+              </div>
+
+              <button type="button" class="copy-email-btn" id="copyEmailBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyBtnLabel">Copy Email Address</span>
+              </button>
+
+              <div class="response-time-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Typical response time: 24–48 hours</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Column: Accordion FAQ -->
+          <section>
+            <div class="faq-list">
+              <!-- Item 1: Notifications not arriving -->
+              <div class="faq-item open">
+                <button type="button" class="faq-trigger">
+                  <span>1. Why are my notifications not arriving on time?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    Because Compliment works 100% on-device without remote servers or cloud accounts, notifications rely directly on your operating system's internal alarm scheduler. Modern devices have aggressive battery-saving modes that may delay or silence local alarms:
+                  </p>
+                  <ul>
+                    <li><strong>Check permissions:</strong> Confirm that notifications are allowed in your device settings for Compliment.</li>
+                    <li><strong>Check scheduled time:</strong> Open Compliment and ensure the daily time toggle is active and set to your desired hour.</li>
+                    <li><strong>Do Not Disturb / Focus:</strong> Make sure your device is not currently silencing incoming banners during scheduled Focus hours.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Item 2: Battery Optimization on Android & iOS -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>2. How do I configure battery optimization and permissions?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>Follow the steps below depending on your operating system and manufacturer:</p>
+                  
+                  <p><strong>On Android (Samsung One UI, Xiaomi HyperOS/MIUI, Pixel, OnePlus):</strong></p>
+                  <ol>
+                    <li>Long press the <strong>Compliment</strong> app icon and tap <span class="code-step">App info (ⓘ)</span>.</li>
+                    <li>Tap <span class="code-step">Battery</span> and select <strong>Unrestricted</strong> (or disable "Put app to sleep").</li>
+                    <li>On Xiaomi/Redmi devices: Enable <span class="code-step">Autostart</span> and set Battery Saver to <strong>No restrictions</strong>.</li>
+                    <li>Tap <span class="code-step">Permissions</span> and ensure <strong>Notifications</strong> and <strong>Alarms &amp; Reminders</strong> are allowed.</li>
+                  </ol>
+
+                  <p><strong>On iOS (iPhone / iPad):</strong></p>
+                  <ol>
+                    <li>Open <span class="code-step">Settings</span> → <span class="code-step">Compliment</span> → <span class="code-step">Notifications</span>.</li>
+                    <li>Enable <strong>Allow Notifications</strong> and check <strong>Immediate Delivery</strong> (rather than "Scheduled Summary").</li>
+                    <li>If you use Focus modes (Sleep, Work), add Compliment to allowed apps under <span class="code-step">Settings → Focus</span>.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Item 3: Changing notification time -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>3. How do I change my daily notification time?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    You can change your scheduled delivery time at any moment:
+                  </p>
+                  <ol>
+                    <li>Open the Compliment app on your device.</li>
+                    <li>Tap the time selector on the main screen.</li>
+                    <li>Pick your new preferred hour and minute (e.g. 08:30 AM for breakfast, or 09:00 PM before bedtime).</li>
+                    <li>Confirm the change. The new schedule takes effect immediately for the next scheduled occurrence.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Item 4: Reinstalling or restoring the app -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>4. How do I reinstall or reset the app?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    If you change phones or need to reinstall:
+                  </p>
+                  <ul>
+                    <li>Simply download Compliment again from Google Play or the App Store.</li>
+                    <li>When opening for the first time, grant the notification permission prompt.</li>
+                    <li>Select your preferred notification time. Because no user login or password is required, the app is ready in less than 10 seconds.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Item 5: Requesting a fix or suggesting a compliment -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>5. How do I request a fix or suggest a compliment?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    We welcome your ideas! Many of the warmest compliments in the app were suggested by community members.
+                  </p>
+                  <p>
+                    To suggest a compliment or report an unexpected bug, email us at <a href="mailto:glazer.dev@gmail.com?subject=Compliment%20App%20Suggestion%20or%20Feedback" style="color:var(--color-primary);font-weight:600;">glazer.dev@gmail.com</a>. If reporting an issue, please mention your device model and operating system version (e.g. Samsung Galaxy S23, Android 14).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-brand-header">
+              <img src="assets/logo.png" alt="Compliment Logo" class="footer-logo-img" />
+              <span>Compliment</span>
+            </div>
+            <p class="footer-desc">
+              A gentle mobile app delivering random compliments on your own schedule. Created with care by GlazerDev.
+            </p>
+          </div>
+
+          <div class="footer-links-group">
+            <div>
+              <h4 class="footer-col-title">Navigation</h4>
+              <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+              </nav>
+            </div>
+
+            <div>
+              <h4 class="footer-col-title">Language</h4>
+              <nav class="footer-nav">
+                <a href="support.html">English</a>
+                <a href="ru/support.html">Русский</a>
+              </nav>
+            </div>
+
+            <div>
+              <h4 class="footer-col-title">Contact</h4>
+              <nav class="footer-nav">
+                <a href="mailto:glazer.dev@gmail.com">glazer.dev@gmail.com</a>
+                <a href="support.html">Help & FAQ</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026 GlazerDev. All rights reserved.
+          </div>
+          <div class="developer-tag">
+            by GlazerDev
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Minimal Vanilla JS -->
+    <script>
+      // Theme Toggle Logic
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('compliment_theme', 'dark');
+          if (moonIcon && sunIcon) {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+          }
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('compliment_theme', 'light');
+          if (moonIcon && sunIcon) {
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+          }
+        }
+      }
+
+      const savedTheme = localStorage.getItem('compliment_theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      }
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          setTheme(isDark ? 'light' : 'dark');
+        });
+      }
+
+      // Mobile Menu
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+      if (mobileMenuBtn && mobileNavDrawer) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileNavDrawer.classList.toggle('open');
+        });
+      }
+
+      // Copy Email Button
+      const copyEmailBtn = document.getElementById('copyEmailBtn');
+      const copyBtnLabel = document.getElementById('copyBtnLabel');
+      if (copyEmailBtn && copyBtnLabel) {
+        copyEmailBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText('glazer.dev@gmail.com');
+            copyBtnLabel.textContent = 'Copied to Clipboard! ✓';
+            setTimeout(() => {
+              copyBtnLabel.textContent = 'Copy Email Address';
+            }, 2500);
+          } catch (e) {
+            window.location.href = 'mailto:glazer.dev@gmail.com';
+          }
+        });
+      }
+
+      // FAQ Accordion Interaction
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        if (trigger) {
+          trigger.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            // Toggle current
+            if (isOpen) {
+              item.classList.remove('open');
+            } else {
+              item.classList.add('open');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

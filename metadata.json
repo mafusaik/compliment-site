@@ -1,0 +1,6 @@
+{
+  "name": "Compliment - Daily Uplifting Mobile App",
+  "description": "Official website for Compliment, a warm and simple mobile app that sends random compliments at your chosen time. By GlazerDev.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="warmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF758C" />
+      <stop offset="50%" stop-color="#FF7EB3" />
+      <stop offset="100%" stop-color="#FFAE7B" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#FF758C" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#warmGrad)" />
+  <!-- Heart Icon -->
+  <path d="M32 46.5 C32 46.5 16 35.8 16 25.5 C16 20.3 20.2 16.5 25.5 16.5 C28.7 16.5 31.5 18.2 32 19.5 C32.5 18.2 35.3 16.5 38.5 16.5 C43.8 16.5 48 20.3 48 25.5 C48 35.8 32 46.5 32 46.5 Z" 
+        fill="#FFFFFF" 
+        filter="url(#softGlow)" />
+  <!-- Small spark of joy -->
+  <circle cx="45" cy="18" r="2" fill="#FFEAA7" opacity="0.9" />
+</svg>

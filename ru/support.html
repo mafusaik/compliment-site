@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поддержка и FAQ — Приложение Compliment</title>
+    <meta name="description" content="Помощь, ответы на частые вопросы и связь с разработчиком приложения Compliment. Настройка времени и решение проблем с уведомлениями." />
+    <meta name="author" content="GlazerDev" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://compliment.app/ru/support.html" />
+    <meta property="og:title" content="Поддержка и FAQ — Compliment" />
+    <meta property="og:description" content="Решение проблем с уведомлениями, изменение времени и обратная связь." />
+    <meta property="og:image" content="../assets/logo.png" />
+
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <link rel="apple-touch-icon" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Top Bar Navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Zone 1: Wordmark with real logo -->
+        <a href="index.html" class="brand-zone" aria-label="Compliment Главная">
+          <img src="../assets/logo.png" alt="Compliment Logo" class="brand-logo-img" />
+          <span class="brand-title">Compliment</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-zone" aria-label="Основная навигация">
+          <a href="index.html" class="nav-link">Главная</a>
+          <a href="support.html" class="nav-link active">Поддержка</a>
+          <a href="privacy.html" class="nav-link">Конфиденциальность</a>
+          <a href="terms.html" class="nav-link">Условия</a>
+        </nav>
+
+        <!-- Zone 3: Actions -->
+        <div class="actions-zone">
+          <a href="../support.html" class="lang-switch" title="Switch to English">
+            EN
+          </a>
+
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Переключить тему">
+            <svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sunIcon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <a href="index.html#download" class="nav-cta-btn">
+            Скачать
+          </a>
+
+          <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="support.html" class="nav-link active">Поддержка</a>
+        <a href="privacy.html" class="nav-link">Конфиденциальность</a>
+        <a href="terms.html" class="nav-link">Условия</a>
+        <div class="mobile-actions">
+          <a href="../support.html" class="lang-switch">English (EN)</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">Поддержка и ответы на вопросы</h1>
+          <p class="page-subtitle">
+            Нужна помощь с настройкой ежедневных комплиментов? Ниже собраны ответы на популярные вопросы и способы связи с разработчиком.
+          </p>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="support-grid">
+          <!-- Left Column -->
+          <aside>
+            <div class="contact-card">
+              <h2 class="contact-title">Связь с разработчиком</h2>
+              <p class="contact-desc">
+                Есть вопрос, пожелание или вы хотите предложить свой комплимент для приложения? Мы читаем каждое входящее письмо.
+              </p>
+
+              <div class="email-box">
+                <span class="email-label">Почта поддержки</span>
+                <a href="mailto:glazer.dev@gmail.com" class="email-link">glazer.dev@gmail.com</a>
+              </div>
+
+              <button type="button" class="copy-email-btn" id="copyEmailBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyBtnLabel">Скопировать адрес</span>
+              </button>
+
+              <div class="response-time-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Обычный срок ответа: 24–48 часов</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Column FAQ -->
+          <section>
+            <div class="faq-list">
+              <!-- Item 1: Notifications not arriving -->
+              <div class="faq-item open">
+                <button type="button" class="faq-trigger">
+                  <span>1. Почему уведомления не приходят вовремя?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    Приложение Compliment функционирует на 100% автономно на вашем смартфоне без удалённых облачных серверов. Доставка уведомлений зависит от встроенного планировщика вашей операционной системы. Современные телефоны могут задерживать локальные напоминания из-за режимов энергосбережения:
+                  </p>
+                  <ul>
+                    <li><strong>Проверьте разрешения:</strong> Убедитесь, что показ уведомлений разрешен в системных настройках телефона для Compliment.</li>
+                    <li><strong>Проверьте расписание:</strong> Откройте Compliment и проверьте, что переключатель включен и время установлено верно.</li>
+                    <li><strong>Режим «Не беспокоить»:</strong> Проверьте, не активирован ли режим фокусирования или ночной режим в момент доставки.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Item 2: Battery Optimization -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>2. Как настроить оптимизацию батареи на Android и iOS?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>Инструкции по настройке в зависимости от производителя вашего устройства:</p>
+                  
+                  <p><strong>На Android (Samsung One UI, Xiaomi HyperOS/MIUI, Pixel, OnePlus):</strong></p>
+                  <ol>
+                    <li>Удерживайте палец на иконке <strong>Compliment</strong> и нажмите <span class="code-step">О приложении (ⓘ)</span>.</li>
+                    <li>Перейдите в раздел <span class="code-step">Батарея</span> и выберите режим <strong>Без ограничений</strong> (или отключите «Перевод в спящий режим»).</li>
+                    <li>На смартфонах Xiaomi/Redmi: включите пункт <span class="code-step">Автозапуск</span> и в контроле фоновой активности выберите <strong>Нет ограничений</strong>.</li>
+                    <li>В разделе <span class="code-step">Разрешения</span> убедитесь, что включены <strong>Уведомления</strong> и <strong>Будильники и напоминания</strong>.</li>
+                  </ol>
+
+                  <p><strong>На iOS (iPhone / iPad):</strong></p>
+                  <ol>
+                    <li>Откройте <span class="code-step">Настройки</span> → <span class="code-step">Compliment</span> → <span class="code-step">Уведомления</span>.</li>
+                    <li>Включите <strong>Допуск уведомлений</strong> и убедитесь, что выбрана <strong>Немедленная доставка</strong> (а не «Сводка по расписанию»).</li>
+                    <li>Если вы используете режимы фокусирования (Сон, Работа), добавьте Compliment в список разрешенных приложений в <span class="code-step">Настройки → Фокусирование</span>.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Item 3: Change time -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>3. Как изменить время ежедневного комплимента?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>Вы можете сменить время получения в любой момент:</p>
+                  <ol>
+                    <li>Откройте приложение Compliment на телефоне.</li>
+                    <li>Нажмите на блок выбора времени на главном экране.</li>
+                    <li>Выберите нужные часы и минуты (например, 08:30 к завтраку или 21:00 перед сном).</li>
+                    <li>Подтвердите выбор. Новое время активируется сразу же для следующего дня.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Item 4: Reinstall -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>4. Как переустановить приложение на новый телефон?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    Если вы сменили телефон или переустановили систему:
+                  </p>
+                  <ul>
+                    <li>Установите Compliment из Google Play или App Store.</li>
+                    <li>При первом запуске подтвердите разрешение на показ уведомлений.</li>
+                    <li>Укажите желаемое время. Так как в приложении нет паролей и регистрации, всё готово к работе меньше чем за 10 секунд.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Item 5: Suggest compliment or fix -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger">
+                  <span>5. Как предложить свой комплимент или сообщить об ошибке?</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="faq-content">
+                  <p>
+                    Мы очень рады вашим идеям! Многие из самых теплых фраз в приложении были предложены пользователями.
+                  </p>
+                  <p>
+                    Чтобы предложить свой текст или сообщить о найденной проблеме, напишите нам на <a href="mailto:glazer.dev@gmail.com?subject=Compliment%20App%20Suggestion%20or%20Feedback" style="color:var(--color-primary);font-weight:600;">glazer.dev@gmail.com</a>. Если вы сообщаете об ошибке, укажите, пожалуйста, модель устройства и версию ОС (например, Samsung Galaxy S23, Android 14).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-brand-header">
+              <img src="../assets/logo.png" alt="Compliment Logo" class="footer-logo-img" />
+              <span>Compliment</span>
+            </div>
+            <p class="footer-desc">
+              Доброе мобильное приложение, отправляющее случайные комплименты в выбранное вами время. Разработано с заботой GlazerDev.
+            </p>
+          </div>
+
+          <div class="footer-links-group">
+            <div>
+              <h4 class="footer-col-title">Навигация</h4>
+              <nav class="footer-nav">
+                <a href="index.html">Главная</a>
+                <a href="support.html">Поддержка</a>
+                <a href="privacy.html">Конфиденциальность</a>
+                <a href="terms.html">Условия использования</a>
+              </nav>
+            </div>
+
+            <div>
+              <h4 class="footer-col-title">Язык</h4>
+              <nav class="footer-nav">
+                <a href="../support.html">English</a>
+                <a href="support.html">Русский</a>
+              </nav>
+            </div>
+
+            <div>
+              <h4 class="footer-col-title">Контакты</h4>
+              <nav class="footer-nav">
+                <a href="mailto:glazer.dev@gmail.com">glazer.dev@gmail.com</a>
+                <a href="support.html">Помощь и FAQ</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026 GlazerDev. Все права защищены.
+          </div>
+          <div class="developer-tag">
+            by GlazerDev
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Minimal Vanilla JS -->
+    <script>
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('compliment_theme', 'dark');
+          if (moonIcon && sunIcon) {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+          }
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('compliment_theme', 'light');
+          if (moonIcon && sunIcon) {
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+          }
+        }
+      }
+
+      const savedTheme = localStorage.getItem('compliment_theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      }
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          setTheme(isDark ? 'light' : 'dark');
+        });
+      }
+
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+      if (mobileMenuBtn && mobileNavDrawer) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileNavDrawer.classList.toggle('open');
+        });
+      }
+
+      const copyEmailBtn = document.getElementById('copyEmailBtn');
+      const copyBtnLabel = document.getElementById('copyBtnLabel');
+      if (copyEmailBtn && copyBtnLabel) {
+        copyEmailBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText('glazer.dev@gmail.com');
+            copyBtnLabel.textContent = 'Адрес скопирован! ✓';
+            setTimeout(() => {
+              copyBtnLabel.textContent = 'Скопировать адрес';
+            }, 2500);
+          } catch (e) {
+            window.location.href = 'mailto:glazer.dev@gmail.com';
+          }
+        });
+      }
+
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        if (trigger) {
+          trigger.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            if (isOpen) {
+              item.classList.remove('open');
+            } else {
+              item.classList.add('open');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

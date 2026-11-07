@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliment — A Daily Spark of Warmth, Right on Time</title>
+    <meta name="description" content="Compliment is a gentle, uplifting mobile app that delivers a random warm compliment at the exact time you choose. Simple, private, and made to brighten your day." />
+    <meta name="author" content="GlazerDev" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://compliment.app/" />
+    <meta property="og:title" content="Compliment — Daily Uplifting Mobile App" />
+    <meta property="og:description" content="Delivers a warm, random compliment at your chosen time every day. Free, simple, and 100% private." />
+    <meta property="og:image" content="assets/logo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Compliment — Daily Uplifting Mobile App" />
+    <meta name="twitter:description" content="Receive a gentle, thoughtful compliment every day right on your schedule." />
+    <meta name="twitter:image" content="assets/logo.png" />
+
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Top Bar Navigation (Strict 3-zone contract) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Zone 1: Single text element wordmark with real logo -->
+        <a href="index.html" class="brand-zone" aria-label="Compliment Home">
+          <img src="assets/logo.png" alt="Compliment Logo" class="brand-logo-img" />
+          <span class="brand-title">Compliment</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-zone" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="support.html" class="nav-link">Support</a>
+          <a href="privacy.html" class="nav-link">Privacy</a>
+          <a href="terms.html" class="nav-link">Terms</a>
+        </nav>
+
+        <!-- Zone 3: Actions (Language toggle + Theme switch + Store CTA) -->
+        <div class="actions-zone">
+          <!-- Language Toggle to Russian separate page -->
+          <a href="ru/index.html" class="lang-switch" title="Переключить на русский">
+            RU
+          </a>
+
+          <!-- Light/Dark Mode Switcher -->
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle color theme">
+            <svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sunIcon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- Primary CTA Button -->
+          <a href="#download" class="nav-cta-btn">
+            Get App
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+        <div class="mobile-actions">
+          <a href="ru/index.html" class="lang-switch">Русский (RU)</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="hero-kicker">
+              <span>💖</span> Simple · Warm · On-device
+            </div>
+            
+            <h1 class="hero-title">
+              A little spark of warmth, <span class="gradient-text">right on time.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Compliment sends you a thoughtful, uplifting notification at the exact hour you choose. No social pressure, no ads, no cloud accounts—just an honest reminder that you matter.
+            </p>
+
+            <!-- Store Buttons (Placeholders ready for real links) -->
+            <!-- STORE LINK PLACEHOLDERS: Replace href attributes with your published app links -->
+            <div class="store-buttons-group" id="download">
+              <a href="https://play.google.com/store/apps/details?id=com.glazerdev.compliment" class="store-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3.6 1.8c-.3.4-.5.9-.5 1.6v17.2c0 .7.2 1.2.5 1.6l.1.1 9.6-9.6v-.2L3.7 2.9l-.1-1.1zM17 15.3l-3.7-3.7v-.2L17 7.7l.1.1 4.4 2.5c1.3.7 1.3 1.9 0 2.6l-4.5 2.4zM13.3 11.4L3.7 21.8c.4.4 1.1.5 1.9 0l11.4-6.5-3.7-3.9zM13.3 12.6l3.7-3.9L5.6 2.2C4.8 1.7 4.1 1.8 3.7 2.2l9.6 10.4z"/>
+                </svg>
+                <div class="store-btn-text">
+                  <span class="store-btn-label">GET IT ON</span>
+                  <span class="store-btn-name">Google Play</span>
+                </div>
+              </a>
+
+              <a href="https://apps.apple.com/app/compliment/id000000000" class="store-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.65-1.07 1.72-.93 2.74 1.01.08 2.03-.5 2.63-1.24z"/>
+                </svg>
+                <div class="store-btn-text">
+                  <span class="store-btn-label">Download on the</span>
+                  <span class="store-btn-name">App Store</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Zero-Pill Unboxed Metadata Line -->
+            <div class="hero-trust-line">
+              <span>Free download</span>
+              <span class="trust-separator" aria-hidden="true">·</span>
+              <span>100% On-device</span>
+              <span class="trust-separator" aria-hidden="true">·</span>
+              <span>No sign-up needed</span>
+            </div>
+          </div>
+
+          <!-- Realistic Phone Mockup Area -->
+          <div class="mockup-wrapper">
+            <div class="phone-device">
+              <!-- SCREENSHOT PLACEHOLDER:
+                   You can easily replace the inner contents of .phone-screen with an <img> tag 
+                   referencing your real app screenshot (e.g. <img src="screenshot.png" alt="App Screenshot" class="w-full h-full object-cover">).
+              -->
+              <div class="phone-screen" id="phoneMockupScreen">
+                <div class="phone-notch-bar">
+                  <span class="tabular-nums">09:41</span>
+                  <div class="notch-pill"></div>
+                  <span>100%</span>
+                </div>
+
+                <div class="phone-body-content">
+                  <!-- Push notification card preview -->
+                  <div class="notification-card" id="mockupNotification">
+                    <div class="notification-header">
+                      <div class="notif-app-info">
+                        <img src="assets/logo.png" alt="Compliment" class="notif-mini-logo" />
+                        <span class="notif-app-name">Compliment</span>
+                      </div>
+                      <span class="notif-time">Just now</span>
+                    </div>
+                    <div class="notif-body" id="complimentText">
+                      "You bring a genuine, calming warmth into every room you walk into."
+                    </div>
+                  </div>
+
+                  <!-- In-app interactive preview widget -->
+                  <div class="inapp-preview-card">
+                    <div class="preview-time-picker">
+                      <span class="time-label">Daily Delivery Time</span>
+                      <span class="time-badge tabular-nums" id="mockupTime">09:00 AM</span>
+                    </div>
+
+                    <button type="button" class="try-compliment-btn" id="generateComplimentBtn">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                      </svg>
+                      <span>Another Compliment</span>
+                    </button>
+
+                    <div class="screenshot-notice">
+                      Tap above to sample more compliments
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 Core Feature Blocks -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Thoughtful by design</div>
+            <h2 class="section-title">Everything you need to smile today, nothing you don't.</h2>
+            <p class="section-desc">
+              We stripped away all algorithms, endless feeds, and engagement tricks. Compliment focuses on doing one quiet thing exceptionally well.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <!-- Feature 1: Random Compliments -->
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Random Compliments</h3>
+              <p class="feature-card-desc">
+                Carefully written words of affirmation that sound like they came from someone who truly cares. Never hollow, never robotic, always respectful.
+              </p>
+            </div>
+
+            <!-- Feature 2: Choose Your Own Time -->
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Choose Your Own Time</h3>
+              <p class="feature-card-desc">
+                Receive your notification exactly when you need encouragement most: alongside morning coffee, during an afternoon slump, or just before unwinding for sleep.
+              </p>
+            </div>
+
+            <!-- Feature 3: Coming Soon: Romantic Calendar -->
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <h3 class="feature-card-title">Romantic Calendar</h3>
+              <p class="feature-card-desc">
+                A calendar screen tracking romantic holidays, anniversaries, and personalized suggested gestures to brighten your partner's life.
+              </p>
+              <div class="coming-soon-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Warmth / Philosophy Section -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="warmth-banner">
+            <div>
+              <h2 class="warmth-title">Designed to make someone's day just a little brighter.</h2>
+              <p class="warmth-p">
+                Most mobile apps demand your attention for hours. Compliment asks for three seconds of your time: read, smile, put your phone down, and go live your day.
+              </p>
+            </div>
+            <div class="quote-box">
+              <div class="quote-text">
+                "Too often we underestimate the power of a touch, a smile, a kind word, or a listening ear."
+              </div>
+              <div class="quote-author">
+                A reminder behind Compliment
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-brand-header">
+              <img src="assets/logo.png" alt="Compliment Logo" class="footer-logo-img" />
+              <span>Compliment</span>
+            </div>
+            <p class="footer-desc">
+              A gentle mobile app delivering random compliments on your own schedule. Created with care by GlazerDev.
+            </p>
+          </div>
+
+          <div class="footer-links-group">
+            <div>
+              <h4 class="footer-col-title">Navigation</h4>
+              <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+              </nav>
+            </div>
+
+            <div>
+              <h4 class="footer-col-title">Language</h4>
+              <nav class="footer-nav">
+                <a href="index.html">English</a>
+                <a href="ru/index.html">Русский</a>
+              </nav>
+            </div>
+
+            <div>
+              <h4 class="footer-col-title">Contact</h4>
+              <nav class="footer-nav">
+                <a href="mailto:glazer.dev@gmail.com">glazer.dev@gmail.com</a>
+                <a href="support.html">Help & FAQ</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026 GlazerDev. All rights reserved.
+          </div>
+          <div class="developer-tag">
+            by GlazerDev
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Minimal Vanilla JS -->
+    <script>
+      // Theme Toggle Logic
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('compliment_theme', 'dark');
+          if (moonIcon && sunIcon) {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+          }
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('compliment_theme', 'light');
+          if (moonIcon && sunIcon) {
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+          }
+        }
+      }
+
+      // Check saved theme or system preference
+      const savedTheme = localStorage.getItem('compliment_theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      }
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          setTheme(isDark ? 'light' : 'dark');
+        });
+      }
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+      if (mobileMenuBtn && mobileNavDrawer) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileNavDrawer.classList.toggle('open');
+        });
+      }
+
+      // Live Compliment Generator in Phone Mockup
+      const compliments = [
+        "You bring a genuine, calming warmth into every room you walk into.",
+        "Your thoughtfulness makes the people around you feel truly seen.",
+        "You handle challenges with far more grace and resilience than you realize.",
+        "Your kindness is a quiet superpower in a noisy world.",
+        "The world is noticeably softer and brighter with you in it.",
+        "Your curiosity and open mind inspire everyone who speaks with you.",
+        "You have an extraordinary gift for making others feel safe and valued."
+      ];
+
+      let complimentIdx = 0;
+      const complimentText = document.getElementById('complimentText');
+      const generateComplimentBtn = document.getElementById('generateComplimentBtn');
+
+      if (generateComplimentBtn && complimentText) {
+        generateComplimentBtn.addEventListener('click', () => {
+          complimentIdx = (complimentIdx + 1) % compliments.length;
+          complimentText.style.opacity = '0';
+          complimentText.style.transform = 'translateY(4px)';
+          setTimeout(() => {
+            complimentText.textContent = '"' + compliments[complimentIdx] + '"';
+            complimentText.style.transition = 'all 0.25s ease';
+            complimentText.style.opacity = '1';
+            complimentText.style.transform = 'translateY(0)';
+          }, 150);
+        });
+      }
+    </script>
+  </body>
+</html>
